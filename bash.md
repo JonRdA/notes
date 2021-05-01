@@ -1,7 +1,7 @@
 # BASH
 ## BOURNE AGAIN SHELL
 
-###COMMANDS
+### COMMANDS
 * A command can be one of the following 4 things:
   * Executable program: examples in `/usr/bin` complied binaries (C++, C...)
     or scripting languages (Perl, Python, Ruby...)
@@ -19,7 +19,7 @@
 * Many executable programs support a `--help` option that displays description
 * More than one command can be put separated with a semicolon `;`
 
-###BASIC COMMANDS
+### BASIC COMMANDS
 * `sudo apt-get update`
 * `sudo apt-get upgrade`
 
@@ -48,7 +48,24 @@
 * `history` display or manipulate the history list
 * `source`  execute file, usually '.bash*' files
 * `chmod 644` change mode of files (permission) 644 means readable executable,
-  writable for user. readable for groups
+   writable for user. readable for groups
+
+
+ ### USEFUL COMMANDS
+ * `find <path>`     search for files in a directory hierarchy
+  * `-type d`                       directories
+  * `-type f`                       files
+  * `-type f -name <filename>`      files by name, case sensitive
+  * `-type f -iname <filename>`     files by name, not case sensit
+  * `-type f -mmin -<n>`           files modified less than n mins ago
+  * `-type f -mmin +<n>`           files modified more than n mins ago
+  * `-type f -mtime +<n>`          files modified more than n days ago
+  * `-size +5M`                     larger than 5 MB
+  * `-empty`                        empty
+  * `-perm 777`                     permitions of 777 read, write, execute
+  * `-maxdepth <n>`                 search only to that level of depth
+  * `-exec <command> {} +`          -exec rm {} +       {} symbolizes the
+     argument to pass which are the results. '+' ends the execution command
 
 
 
