@@ -18,10 +18,10 @@
 * Many executable programs support a `--help` option that displays description
 * More than one command can be put separated with a semicolon `;`
 
+
 ### BASIC COMMANDS
 * `sudo apt-get update`
 * `sudo apt-get upgrade`
-
 * `ls`      list directory
 * `cd`      change directory
 * `mdkir`   make directory
@@ -30,7 +30,6 @@
 * `cp`      copy, -u update
 * `mv`      move file, rename file, move and rename
 * `rm`      remove files
-
 * `man`      manual page of command, documentation
 * `type`     displays kind of command passed
 * `which`    display executable's location
@@ -40,7 +39,6 @@
 * `zless`    display contents of gzip compressed files
 * `whatis`   one line manual page descriptions
 * `info`     manuals displayed with a reader program, hyperlinks to nodes
-
 * `|`       pass first commands output as seconds input <cmd> | <cmd>
 * `$`       replaces with result of the command e.g. echo "folder: $(pwd)"
 * `du`      disk usage. 'du -hcs' gives a nice output
@@ -49,36 +47,36 @@
 * `chmod 644` change mode of files (permission) 644 means readable executable,
    writable for user. readable for groups
 
- ### USEFUL COMMANDS
-* `find`     search for files in a directory hierarchy
-  * `find [-H] [-L] [-P] [-Olevel] [-D debugopts] [path...] [expression]`
-  * `-type d`                       directories
-  * `-type f`                       files
-  * `-type f -name <filename>`      files by name, case sensitive
-  * `-type f -iname <filename>`     files by name, not case sensit
-  * `-type f -mmin -<n>`            files modified less than n mins ago
-  * `-type f -mmin +<n>`            files modified more than n mins ago
-  * `-type f -mtime +<n>`           files modified more than n days ago
-  * `-size +5M`                     larger than 5 MB
-  * `-empty`                        empty
-  * `-perm 777`                     permitions of 777 read, write, execute
-  * `-maxdepth <n>`                 search only to that level of depth
-  * `-exec <command> {} +`          -exec rm {} +       {} symbolizes the
-     argument to pass which are the results. '+' ends the execution command
 
+### USEFUL COMMANDS
+* `find`     search for files in a directory hierarchy
+    * `find [-H] [-L] [-P] [-Olevel] [-D debugopts] [path...] [expression]
+    * `-type d`                       directories
+    * `-type f`                       files
+    * `-type f -name <filename>`      files by name, case sensitive
+    * `-type f -iname <filename>`     files by name, not case sensit
+    * `-type f -mmin -<n>`            files modified less than n mins ago
+    * `-type f -mmin +<n>`            files modified more than n mins ago
+    * `-type f -mtime +<n>`           files modified more than n days ago
+    * `-size +5M`                     larger than 5 MB
+    * `-empty`                        empty
+    * `-perm 777`                     permitions of 777 read, write, execute
+    * `-maxdepth <n>`                 search only to that level of depth
+    * `-exec <command> {} +`          -exec rm {} +       {} symbolizes the
+       argument to pass which are the results. '+' ends the execution command
 
 * `grep` print lines that match patterns
-  * `grep [OPTION...] PATTERNS [FILE...]`
-  * `-w`        match only whole words
-  * `-i`        convert to not case sensitive
-  * `-n`        returns the line number
-  * `-r`        recursive search
-  * `-l`        only return the file name, not text
-  * `-l`        return file name and number of occurrences
-  * `-B <n>`    watch number of lines before found line
-  * `-A <n>`    watch number of lines after found line
-  * `-C <n>`    watch number of lines before and after
-  * `-P`        usre pearl compatible regular expressions
+    * `grep [OPTION...] PATTERNS [FILE...]`
+    * `-w`        match only whole words
+    * `-i`        convert to not case sensitive
+    * `-n`        returns the line number
+    * `-r`        recursive search
+    * `-l`        only return the file name, not text
+    * `-l`        return file name and number of occurrences
+    * `-B <n>`    watch number of lines before found line
+    * `-A <n>`    watch number of lines after found line
+    * `-C <n>`    watch number of lines before and after
+    * `-P`        usre pearl compatible regular expressions
 
 
 
