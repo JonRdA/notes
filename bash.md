@@ -1,7 +1,6 @@
-# BASH
-## BOURNE AGAIN SHELL
+# BASH - BOURNE AGAIN SHELL
 
-### COMMANDS
+## COMMANDS
 * A command can be one of the following 4 things:
   * Executable program: examples in `/usr/bin` complied binaries (C++, C...)
     or scripting languages (Perl, Python, Ruby...)
@@ -50,22 +49,36 @@
 * `chmod 644` change mode of files (permission) 644 means readable executable,
    writable for user. readable for groups
 
-
  ### USEFUL COMMANDS
- * `find <path>`     search for files in a directory hierarchy
+* `find`     search for files in a directory hierarchy
+  * `find [-H] [-L] [-P] [-Olevel] [-D debugopts] [path...] [expression]`
   * `-type d`                       directories
   * `-type f`                       files
   * `-type f -name <filename>`      files by name, case sensitive
   * `-type f -iname <filename>`     files by name, not case sensit
-  * `-type f -mmin -<n>`           files modified less than n mins ago
-  * `-type f -mmin +<n>`           files modified more than n mins ago
-  * `-type f -mtime +<n>`          files modified more than n days ago
+  * `-type f -mmin -<n>`            files modified less than n mins ago
+  * `-type f -mmin +<n>`            files modified more than n mins ago
+  * `-type f -mtime +<n>`           files modified more than n days ago
   * `-size +5M`                     larger than 5 MB
   * `-empty`                        empty
   * `-perm 777`                     permitions of 777 read, write, execute
   * `-maxdepth <n>`                 search only to that level of depth
   * `-exec <command> {} +`          -exec rm {} +       {} symbolizes the
      argument to pass which are the results. '+' ends the execution command
+
+
+* `grep` print lines that match patterns
+  * `grep [OPTION...] PATTERNS [FILE...]`
+  * `-w`        match only whole words
+  * `-i`        convert to not case sensitive
+  * `-n`        returns the line number
+  * `-r`        recursive search
+  * `-l`        only return the file name, not text
+  * `-l`        return file name and number of occurrences
+  * `-B <n>`    watch number of lines before found line
+  * `-A <n>`    watch number of lines after found line
+  * `-C <n>`    watch number of lines before and after
+  * `-P`        usre pearl compatible regular expressions
 
 
 
