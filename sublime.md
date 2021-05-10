@@ -1,4 +1,4 @@
-# Sublime Text 3 - Useful Shortcuts (Windows)
+# Sublime Text 3
 
 ## General
 
