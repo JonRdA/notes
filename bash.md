@@ -44,17 +44,17 @@
 * `cp`      copy, -u update
 * `mv`      move file, rename file, move and rename
 * `rm`      remove files
-* `man`      manual page of command, documentation
-* `type`     displays kind of command passed
-* `which`    display executable's location
-* `help`     get help for shell builtins
-* `file`     show file info
-* `less`     read text file
-* `zless`    display contents of gzip compressed files
-* `whatis`   one line manual page descriptions
-* `info`     manuals displayed with a reader program, hyperlinks to nodes
-* `|`       pass first commands output as seconds input <cmd> | <cmd>
-* `$`       replaces with result of the command e.g. echo "folder: $(pwd)"
+* `man`     manual page of command, documentation
+* `type`    displays kind of command passed
+* `which`   display executable's location
+* `help`    get help for shell builtins
+* `file`    show file info
+* `less`    read text file
+* `zless`   display contents of gzip compressed files
+* `whatis`  one line manual page descriptions
+* `info`    manuals displayed with a reader program, hyperlinks to nodes
+* `|`       pipeline, first commands output to  seconds input `<cmd> | <cmd>`
+* `$`       replaces with result of the command e.g. `echo folder: $(pwd)
 * `du`      disk usage. 'du -hcs' gives a nice output
 * `history` display or manipulate the history list
 * `source`  execute file, usually '.bash*' files
@@ -76,8 +76,8 @@
   * `-empty`                        empty
   * `-perm 777`                     permitions of 777 read, write, execute
   * `-maxdepth <n>`                 search only to that level of depth
-  * `-exec <command> {} +`          -exec rm {} +       {} symbolizes the
-       argument to pass which are the results. '+' ends the execution command
+  * `-exec <command> {} +`          `{}` symbolizes the argument to pass which
+    are the results. `+` ends the execution command
 
 * `grep` print lines that match patterns
   * `grep [OPTION...] PATTERNS [FILE...]`
