@@ -56,4 +56,10 @@ result = a > b ? x : y;
 * Array declaration syntax: `type array_name[size];`
 
 
+## POINTERS
+* Data type denoted with a `*`
+* `&<var>` get location in memory of variable `var`
+* `*<poi>` go to address of pointer `poi`
+* `"%p"` format code for pointers  
+* `int *p = &n` defines variable `p` as pointer of variable `n` of type `int`. The type of value that the pointer references must be specified `int`. `*` operator means the variable `p` is a pointer.
 
