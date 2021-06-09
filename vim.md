@@ -2,7 +2,7 @@
 
 ## GENERAL
 * Vim has 3 modes:
-  * __Command mode__
+  * __Command or normal mode__
   * __Insert mode__
 
 ## COMMANDS
@@ -13,19 +13,27 @@
 ### CURSOR
 * `0` to beginning of line
 * `$` to end of line
-* `w` to beginning of next word, with punctuation
+* `w` to beginning of next word
 * `W` to beginning of next word, ignore punctuation
-* `b` to end of next word, with punctuation
-* `B` to end of next word, ignoring punctuation
+* `b` to beginning of current word
+* `B` to beginning of current word, ignoring punctuation
+* `e` to end of current word
 * `ctrl F` page down
 * `ctrl B` page u
 * `numberG` to line number
 * `G` to file last line
 
+### EDIT
+* `u` undo last change
+* `U` undo all line, return to original state
+* `Ctrl-R` redo, undo the undo's
+* `p` put text after cursor (paste)
+* `r<char>` replace character, `rt` replaces cursor character with `t`
+* `c<motion>` change, delete motion & insert mode, `ce` change until end word
+
 ### WRITE
-* `u` undo last changes
 * `a` append text, move cursor forward and enter _insert mode_
-* `a` append text, move to end of line and enter _insert mode_
+* `A` append text, move to end of line and enter _insert mode_
 * `o` open line below current & _insert mode_
 * `O` open line above durrent & _insert mode_
 
