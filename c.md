@@ -1,4 +1,4 @@
-### C PROGRAMMING LANGUAGES
+# C PROGRAMMING LANGUAGE
 
 ## GENERAL
 * Can't use function before defining. To work first line must be copied on top
@@ -14,8 +14,8 @@ printf("%i", (int) ch)
 $ 72
 ```
 
-* a data type can be modified on the run specified between parenthesis before
-   the variable is used:    (float) my_integer  will treat my_integer as a float
+* a data type can be modified using parenthesis before the variable
+`(float) n`  will treat the integer `n` as a float
 *  typedef struct --> creates a new data:
 ```c
 typedef struct Books {
@@ -48,18 +48,48 @@ result = a > b ? x : y;
   be added at the top. Identical to definition but adding `;` at the end
 * Declaration syntax: `return_type func_name(argument_list);`
 * Arguments lists are comma separated and must specify the type
+* Functions receive copies of the passed arguments
 
 ## ARRAYS
 * An array is a block of contiguous space in memory, identically-sized blocks
 * They contain the same data types
 * Can be accessed by index.
 * Array declaration syntax: `type array_name[size];`
+* An arrays name is actually a pointer to the first byte, thus functions can
+  change the values if array is passed as argument.
+* Bracket notation is syntactic sugar for going to next byte in memory.
+  `s[1]` is equivalent to `*(s + 1)` go to address of pointer `s` + 1 byte
 
 
 ## POINTERS
-* Data type denoted with a `*`
-* `&<var>` get location in memory of variable `var`
-* `*<poi>` go to address of pointer `poi`
+* Data type denoted with a `*`, `*q` means that variable `q` is a pointer
+* `int *n` variable n pointer to an int, `char *s` var s pointer to a char
+   The type of value that the pointer references must be specified `int`. `*`
+* `&<var>` __address extraction__ operator, get location in memory of `var`
+* `*<poi>` __dereference__ operator go to referende address of pointer `poi`
 * `"%p"` format code for pointers  
-* `int *p = &n` defines variable `p` as pointer of variable `n` of type `int`. The type of value that the pointer references must be specified `int`. `*` operator means the variable `p` is a pointer.
+* `int *p = &n` defines variable `p` as pointer of variable `n` of type `int`.
+   operator means the variable `p` is a pointer.
+* `NULL` must be written if pointer is initialized with no address to point at
 
+
+## MEMORY
+* `malloc()` memory allocation, returns pointer to the asked number of bytes
+* `free()` dealocate memory
+
+
+## BASIC FUNCTIONS
+* `printf()` print formated
+* `scanf()` reads input from **stdin** according to format, writes value to
+  memory so a pointer must be passed as argument, otherwise it'd get a copy
+* `fprintf()` file formated print
+
+
+## FILE I/O
+* `FILE` data type for initializing file pointers `FILE *f = fopen(<fpath>)`
+* functions`fopen()`, `flocse()`, `fgetc()`, `fputc()`, `fread()`, `fwrite()`
+  are in *stdio.h* and accept file pointer as parameter, except fopen
+* `fopen(<filename>, <operation>)` need to check returned pointer is not NULL
+* `char ch = fgetc(<file pointer>);` file get a character, read next
+* To read and write to the same file, 2 pointers are needed "r" & "w"
+* `EOF` end of file for checking in loops
