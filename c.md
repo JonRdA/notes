@@ -18,12 +18,14 @@ $ 72
 `(float) n`  will treat the integer `n` as a float
 *  typedef struct --> creates a new data:
 ```c
-typedef struct Books {
+typedef struct Books 
+{
    char title[50];
    char author[50];
    char subject[100];
    int book_id;
-} Book;
+}
+Book;
    ```
 
 ## CONDITIONALS
@@ -33,10 +35,12 @@ typedef struct Books {
 * Switch(var) is an enumeration of discrete cases, break is needed after case
 * Ternary operator allows one line conditionals:
 ```c
- if (a > b) {
+ if (a > b) 
+{
     result = x;
 }
-else {
+else 
+{
     result = y;
 }
 // Is equivalent to the following
@@ -63,8 +67,8 @@ result = a > b ? x : y;
 
 ## POINTERS
 * Data type denoted with a `*`, `*q` means that variable `q` is a pointer
-* `int *n` variable n pointer to an int, `char *s` var s pointer to a char
-   The type of value that the pointer references must be specified `int`. `*`
+* The type of value that the pointer references must be specified 
+  `int *n` variable n pointer to an int, `char *s` var s pointer to a char
 * `&<var>` __address extraction__ operator, get location in memory of `var`
 * `*<poi>` __dereference__ operator go to referende address of pointer `poi`
 * `"%p"` format code for pointers  
@@ -74,8 +78,20 @@ result = a > b ? x : y;
 
 
 ## MEMORY
-* `malloc()` memory allocation, returns pointer to the asked number of bytes
-* `free()` dealocate memory
+* `malloc(<bytes>)` memory allocator, returns pointer to the asked memory.
+  If no memory can be given returns a `NULL` pointer, need to check for it
+* `free(<pointer>)` dealocate memory
+* Static & dynamic memory allocation
+```c
+// Statically obtain an integer
+int x:
+// Cynamically obtain an integer
+int *px = malloc(sizeof(int));
+```
+* 3 folden rules
+  * Every block of memory that was `malloc()`ed must by `free()`d
+  * Only memory that was `malloc()` shoud be `free()`d
+  * Do not `free()` a block of memory more than once
 
 
 ## BASIC FUNCTIONS
@@ -86,10 +102,16 @@ result = a > b ? x : y;
 
 
 ## FILE I/O
-* `FILE` data type for initializing file pointers `FILE *f = fopen(<fpath>)`
+* `FILE` data type for initializing file pointers `FILE \n*f = fopen(<fpath>)`
 * functions`fopen()`, `flocse()`, `fgetc()`, `fputc()`, `fread()`, `fwrite()`
   are in *stdio.h* and accept file pointer as parameter, except fopen
 * `fopen(<filename>, <operation>)` need to check returned pointer is not NULL
 * `char ch = fgetc(<file pointer>);` file get a character, read next
 * To read and write to the same file, 2 pointers are needed "r" & "w"
 * `EOF` end of file for checking in loops
+* `fread(<buffer>, <size>, <qty>, <file pointer>)` read arbitrary amount
+  ```c
+int arr[10];
+fread(arr, sizeof(int), 10, ptr)
+```
+* `fwrite(<buffer>, <size>, <qty>, <file pointer>)`

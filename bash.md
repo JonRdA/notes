@@ -40,6 +40,7 @@
 * `cd`      change directory
 * `mdkir`   make directory
 * `touch`   create a file
+* `ln`      create link, option `-s` symbolic, otherwise hard
 * `cat`     read text of file
 * `cp`      copy, -u update
 * `mv`      move file, rename file, move and rename
@@ -92,3 +93,9 @@
   * `-C <n>`    watch number of lines before and after
   * `-P`        usre pearl compatible regular expressions
 
+
+## PROCESSES
+When modern OS are _multitasking_ they create the illusion by switching
+from executing programs. Linux Kernel manages the different programs waiting
+their turn at the CPU using __processes__. 
+* `&` after a command returns a process to the foreground
