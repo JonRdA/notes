@@ -110,7 +110,7 @@ int *px = malloc(sizeof(int));
 * To read and write to the same file, 2 pointers are needed "r" & "w"
 * `EOF` end of file for checking in loops
 * `fread(<buffer>, <size>, <qty>, <file pointer>)` read arbitrary amount
-  ```c
+```c
 int arr[10];
 fread(arr, sizeof(int), 10, ptr)
 ```
