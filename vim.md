@@ -2,8 +2,9 @@
 
 ## GENERAL
 * Vim has 3 modes:
-  * __Command or normal mode__
-  * __Insert mode__
+* `Esc` **Command**
+* `i` **Insert**
+* `v` **visual**
 
 ## COMMANDS
 * `<n><c>` executes the program `n` times where n is number and c command
@@ -32,7 +33,8 @@
 * `Ctrl-R` redo, undo the undo's
 * `p` **put** text after cursor (paste)
 * `r<char>` **replace** character, `rt` replaces cursor character with `t`
-* `c<motion>` **change**, delete motion & insert mode, `ce` change until end word
+* `R` replace more than one character, every typed char replaces existing one
+* `c<motion>` **change**, delete motion & insert, `ce` change until end word
 
 ## WRITE
 * `a` append text, move cursor forward and enter _insert mode_
@@ -68,6 +70,7 @@
 * `f` search a character within a line `;` repeat search
 * `/` search forward for word or phrase, `n` repeat, `N` repeat backwards
 * `?` search backward for word or phrase
+* `/word\c` ignore case `\c`
 
 ## SUBSTITUTE
 * `:s/old/new` substitute in line the first occurrence of old for new
@@ -80,6 +83,7 @@
   * `s` operation: substitution
   * `line/Line` search/substitution
   * `g` global, `gc` global + user confirmation
+
 ## FILES
 * `:bn` next file
 * `:bp` previous file
@@ -89,5 +93,10 @@
 * `:r <filename>` inserts the specified file below cursor position
 * `:e <filename>` opens the specified file
 * `Ctrl-G` show file status and location
+* `:w[<fname>]` write file, if filename specified write to new file
+* `:r` **read** insert contents on line below cursor
+  * `:r <fname>` put contents of file `fname`
+  * `:r !<cmd>` put output of shell command `:r !ls`
+
 
 ## TO LEARN
