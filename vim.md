@@ -14,6 +14,7 @@
 ## CURSOR MOTIONS
 * `0` to beginning of line
 * `$` to end of line
+* `^` to first non-blank character of line
 * `w` to beginning of next word
 * `W` to beginning of next word, ignore punctuation
 * `b` to beginning of current word
@@ -23,18 +24,20 @@
 * `ctrl B` page u
 * `numberG` to line number
 * `<n>G` to file `n` line, default last
-* `gg` go to first line
-* `Ctrl-O` go to previous cursor location (big jumps), `Ctrl-I` forward
-* `%` find a matching `)`, `]` or `}`
+* `gg` go to first line, shortcut of `1G`
+* `<C-o>` go to previous cursor location (big jumps), `<C-i>` forward
+* `%` go to matching `)`, `]` or `}`
+* `*` to next occurrence of word under cursor, `#` previous
 
 ## EDIT
 * `u` undo last change
 * `U` undo all line, return to original state
-* `Ctrl-R` redo, undo the undo's
+* `<C-r>` redo, undo the undo's
 * `p` **put** text after cursor (paste)
 * `r<char>` **replace** character, `rt` replaces cursor character with `t`
 * `R` replace more than one character, every typed char replaces existing one
 * `c<motion>` **change**, delete motion & insert, `ce` change until end word
+* `.` repeat the last command
 
 ## WRITE
 * `a` append text, move cursor forward and enter _insert mode_
@@ -71,10 +74,11 @@
 * `/` search forward for word or phrase, `n` repeat, `N` repeat backwards
 * `?` search backward for word or phrase
 * `/word\c` ignore case `\c`
+* `d2/foo` search can be a motion, delete until second occurrence of `foo`
 
 ## SUBSTITUTE
 * `:s/old/new` substitute in line the first occurrence of old for new
-* `:s/old/new/g` global flag  `g`, substitute all occurrences in line 
+* `:s/old/new/g` global flag  `g`, substitute all occurrences in line  
 * `:#,#s/old/new/g` substitute between 2 lines, # and #, number of line
 * `:%s/old/new/g` substitute in the entire file
 * `%s/old/new/gc` find in entire file and prompt wheter to substitute or not
@@ -92,7 +96,7 @@
 * `:buffers` show open files
 * `:r <filename>` inserts the specified file below cursor position
 * `:e <filename>` opens the specified file
-* `Ctrl-G` show file status and location
+* `<C-g>` show file status and location
 * `:w[<fname>]` write file, if filename specified write to new file
 * `:r` **read** insert contents on line below cursor
   * `:r <fname>` put contents of file `fname`
