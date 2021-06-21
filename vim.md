@@ -13,8 +13,8 @@
 * `.` repeats last change, even saving keystrokes in insert mode, mini-macro
 
 ### COMPOUND COMMANDS
-Coumpound | Longhand
---------------------
+Compound | Longhand
+---------|----------
 `C` | `c$`
 `s` | `cl`
 `S` | `^C`
