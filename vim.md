@@ -10,6 +10,18 @@
 * `<n><c>` executes the program `n` times where n is number and c command
 * `:` character starts an ex command
 * `%` specifies range of lines for the operation
+* `.` repeats last change, even saving keystrokes in insert mode, mini-macro
+
+### COMPOUND COMMANDS
+Coumpound | Longhand
+--------------------
+`C` | `c$`
+`s` | `cl`
+`S` | `^C`
+`I` | `^i`
+`A` | `$a`
+`o` | `A<CR>`
+`O` | `ko`
 
 ## CURSOR MOTIONS
 * `0` to beginning of line
@@ -103,4 +115,5 @@
   * `:r !<cmd>` put output of shell command `:r !ls`
 
 
-## TO LEARN
+## PAGE LOCATION
+* page 6
