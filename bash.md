@@ -55,10 +55,10 @@
 * `whatis`  one line manual page descriptions
 * `info`    manuals displayed with a reader program, hyperlinks to nodes
 * `|`       pipeline, first commands output to  seconds input `<cmd> | <cmd>`
-* `$`       replaces with result of the command e.g. `echo folder: $(pwd)
+* `$`       replaces with result of the command e.g. `echo folder: $(pwd)`
 * `du`      disk usage. 'du -hcs' gives a nice output
 * `history` display or manipulate the history list
-* `source`  execute file, usually '.bash*' files
+* `source`  execute file, usually `.bash*` files
 * `chmod 644` change mode of files (permission) 644 means readable executable,
    writable for user. readable for groups
 

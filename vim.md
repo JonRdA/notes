@@ -40,20 +40,25 @@ Compound | Longhand
 * `<C-o>` go to previous cursor location (big jumps), `<C-i>` forward
 * `%` go to matching `)`, `]` or `}`
 * `*` to next occurrence of word under cursor, `#` previous
+* `f{char}` to next `char` in line, `3fz` to 3rd `z`. `F{char}` previous
+* `t{char}` to next `char` in line, `3fz` to 3rd `z`. `T{char}` previous
+* `;` repeat latest `f`, `t`, `F` or `T`
+* `,` repeat latest `f`, `t`, `F` or `T` in opposite direction
 
 ## EDIT
 * `u` undo last change
 * `U` undo all line, return to original state
 * `<C-r>` redo, undo the undo's
 * `p` **put** text after cursor (paste)
-* `r<char>` **replace** character, `rt` replaces cursor character with `t`
+* `r{char}` **replace** character, `rt` replaces cursor character with `t`
 * `R` replace more than one character, every typed char replaces existing one
-* `c<motion>` **change**, delete motion & insert, `ce` change until end word
+* `s` delete count characters & insert mode
+* `c{motion}` **change**, delete motion & insert, `ce` change until end word
 * `.` repeat the last command
 
 ## WRITE
-* `a` append text, move cursor forward and enter _insert mode_
-* `A` append text, move to end of line and enter _insert mode_
+* `a` append text, move cursor forward & _insert mode_
+* `A` append text, move to end of line & _insert mode_
 * `o` open line below current & _insert mode_
 * `O` open line above durrent & _insert mode_
 
@@ -82,11 +87,12 @@ Compound | Longhand
 * `:m<n>` moves current line to line 'n'. with `+n` relative movement
 
 ## SEARCH
-* `f` search a character within a line `;` repeat search
+* Last search will always be active, if pressed `n` or `N` will continue
 * `/` search forward for word or phrase, `n` repeat, `N` repeat backwards
 * `?` search backward for word or phrase
 * `/word\c` ignore case `\c`
 * `d2/foo` search can be a motion, delete until second occurrence of `foo`
+* `*` search forward the cursor word, `#` backwards
 
 ## SUBSTITUTE
 * `:s/old/new` substitute in line the first occurrence of old for new

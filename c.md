@@ -85,10 +85,10 @@ result = a > b ? x : y;
 ```c
 // Statically obtain an integer
 int x:
-// Cynamically obtain an integer
+// Dynamically obtain an integer
 int *px = malloc(sizeof(int));
 ```
-* 3 folden rules
+* 3 golden rules
   * Every block of memory that was `malloc()`ed must by `free()`d
   * Only memory that was `malloc()` shoud be `free()`d
   * Do not `free()` a block of memory more than once
@@ -103,7 +103,7 @@ int *px = malloc(sizeof(int));
 
 ## FILE I/O
 * `FILE` data type for initializing file pointers `FILE \n*f = fopen(<fpath>)`
-* functions`fopen()`, `flocse()`, `fgetc()`, `fputc()`, `fread()`, `fwrite()`
+* functions`fopen()`, `fclose()`, `fgetc()`, `fputc()`, `fread()`, `fwrite()`
   are in *stdio.h* and accept file pointer as parameter, except fopen
 * `fopen(<filename>, <operation>)` need to check returned pointer is not NULL
 * `char ch = fgetc(<file pointer>);` file get a character, read next
