@@ -32,8 +32,8 @@ Compound | Longhand
 * `b` to beginning of current word
 * `B` to beginning of current word, ignoring punctuation
 * `e` to end of current word
-* `ctrl F` page down
-* `ctrl B` page u
+* `<C-f>` page down
+* `<C-b>` page u
 * `numberG` to line number
 * `<n>G` to file `n` line, default last
 * `gg` go to first line, shortcut of `1G`
@@ -41,7 +41,7 @@ Compound | Longhand
 * `%` go to matching `)`, `]` or `}`
 * `*` to next occurrence of word under cursor, `#` previous
 * `f{char}` to next `char` in line, `3fz` to 3rd `z`. `F{char}` previous
-* `t{char}` to next `char` in line, `3fz` to 3rd `z`. `T{char}` previous
+* `t{char}` till before  next `char` in line, `T{char}` previous
 * `;` repeat latest `f`, `t`, `F` or `T`
 * `,` repeat latest `f`, `t`, `F` or `T` in opposite direction
 
@@ -54,7 +54,7 @@ Compound | Longhand
 * `R` replace more than one character, every typed char replaces existing one
 * `s` delete count characters & insert mode
 * `c{motion}` **change**, delete motion & insert, `ce` change until end word
-* `.` repeat the last command
+* `~` switch case on character under the cursor and move cursor
 
 ## WRITE
 * `a` append text, move cursor forward & _insert mode_
@@ -75,6 +75,7 @@ Compound | Longhand
 * `yy` current line `5yy` current + 4
 * `yW` current position to beginning of next word
 * `y$` current position to end of line
+
 * `y0` current position to beginning of line
 * `y^` current position to first non-whitespace charecter in line
 * `yG` current position to end of line

@@ -3,9 +3,9 @@
 ## STANDARD INPUT, OUTPUT AND ERROR
 * Programs send their results to special files:
 * Programs produce output on any of several numbered file streams:
-  * 0: _stdout_ standard output file where results are sent
-  * 1: _stderr_ standard error file where status messages are sent
-  * 2: _stdin_ input that pgrograms take, by default, attached to keyboard
+  * 1: _stdout_ standard output file where results are sent
+  * 2: _stderr_ standard error file where status messages are sent
+  * 3: _stdin_ input that pgrograms take, by default, attached to keyboard
 
 ### I/O REDIRECTIONS
 * `>` _stdout_ Redirection operator. Once Overwrites file, twice appends `>>`
@@ -21,7 +21,7 @@
   * Command built into the shell itself: shell builtins (cd..)
   * Shell function: miniature shell scripts incorporated into the environment
   * Alias: user defined commands
-* Usually followed by options that modify behavior and arguments (items upon
+* Usually followed by options (modify behavior) and arguments (items upon
   which the command acts)
 * Documentation:
   * `[]` square brackets in a command's syntax indicate optional items
@@ -99,3 +99,20 @@ When modern OS are _multitasking_ they create the illusion by switching
 from executing programs. Linux Kernel manages the different programs waiting
 their turn at the CPU using __processes__. 
 * `&` after a command returns a process to the foreground
+
+## SHORTCUTS
+* Cursor movement
+  * `<C-a>` to beginning of line
+  * `<C-e>` to end of line
+  * `<C-f>` move cursor forward one character
+  * `<C-b>` move cursor backward one character
+  * `<Alt-f>` move cursor forward one word
+  * `<Alt-b>` move cursor backward one word
+* Modifying text
+  * `<C-d>` delete character at cursor
+  * `<C-t>` transpose character at cursor
+  * `<Alt-t>` transpose word at cursor
+* Killing & Yanking (Cut & Paste)
+  * `<C-k>` kill from cursor to end of line
+  * `<C-u>` kill from dursor to beginning of line
+  * `<C-y>` yank text from kill-ring 
