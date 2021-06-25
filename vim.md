@@ -39,14 +39,16 @@ Compound | Longhand
 * `gg` go to first line, shortcut of `1G`
 * `<C-o>` go to previous cursor location (big jumps), `<C-i>` forward
 * `%` go to matching `)`, `]` or `}`
-* `*` to next occurrence of word under cursor, `#` previous
-* `f{char}` to next `char` in line, `3fz` to 3rd `z`. `F{char}` previous
+* `f{char}` ro next `char` in line, `3fz` to 3rd `z`. `F{char}` previous
 * `t{char}` till before  next `char` in line, `T{char}` previous
 * `;` repeat latest `f`, `t`, `F` or `T`
 * `,` repeat latest `f`, `t`, `F` or `T` in opposite direction
+* `aw` motion for "a word" `daw` deletes the word the cursor is in
 
 ## EDIT
-* `u` undo last change
+* `J` join lines
+* `u` undo last change, change everything we do between entering insert mode
+  and comming back to normal mode
 * `U` undo all line, return to original state
 * `<C-r>` redo, undo the undo's
 * `p` **put** text after cursor (paste)
@@ -55,6 +57,18 @@ Compound | Longhand
 * `s` delete count characters & insert mode
 * `c{motion}` **change**, delete motion & insert, `ce` change until end word
 * `~` switch case on character under the cursor and move cursor
+* `ddp` swaps line: `dd` delete line; `p` paste below
+* `:m` **move** command
+  * `:m 12` move current line to after line 12
+  * `:m $` move current line to after last line
+  * `:5,7m 21` move lines 5, 6 & 7 to after line 21
+  * `:.,.+4m 21` move 5 lines starting at current to after line 21
+
+## NUMBERS  
+* Arithmetic operations over cursor digit, supports hex, octal
+* `{n}<C-a>` addition of count `n`
+* `{n}<C-x>` subtraction of count `n`
+
 
 ## WRITE
 * `a` append text, move cursor forward & _insert mode_
@@ -75,17 +89,11 @@ Compound | Longhand
 * `yy` current line `5yy` current + 4
 * `yW` current position to beginning of next word
 * `y$` current position to end of line
-
 * `y0` current position to beginning of line
 * `y^` current position to first non-whitespace charecter in line
-* `yG` current position to end of line
+* `yG` current position to end of file
 * `y20G` current position to 20th line of file
 
-## EDITING
-* `J` join lines
-* `~` change one character upper to lower or vice versa
-* `ddp` swaps line: `dd` delete line; `p` paste below
-* `:m<n>` moves current line to line 'n'. with `+n` relative movement
 
 ## SEARCH
 * Last search will always be active, if pressed `n` or `N` will continue
@@ -123,4 +131,4 @@ Compound | Longhand
 
 
 ## PAGE LOCATION
-* page 6
+* page 22

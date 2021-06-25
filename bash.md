@@ -116,3 +116,11 @@ their turn at the CPU using __processes__.
   * `<C-k>` kill from cursor to end of line
   * `<C-u>` kill from dursor to beginning of line
   * `<C-y>` yank text from kill-ring 
+
+## CONFIGURATION
+* `ls` output color 
+  * `di=00;31` sets bold text `a0` and red foreground `31`
+  * xterm-256 colors `di=38;5;215;01` sets 256/24-bit fg color `38;5` color 
+    number `215` and bold `01`
+
+  
