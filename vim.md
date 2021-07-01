@@ -6,6 +6,15 @@
 * `i` **Insert**
 * `v` **visual**
 
+## SYNTAX
+`operator{motion}` is a powerfull combination for editing. The operator
+command is applied on the motion. Its effect reaches from the cursor to the
+specified position by the motion command e.g. `dap` delete a paragraph,
+`gUw` convert to uppercase a word
+
+When an operator command is invoked in duplicate it acts upon the current e.g.
+line `dd` delete line, `>>` indent line, `gUgU` or `gUU` line to uppercase
+
 ## COMMANDS
 * `<n><c>` executes the program `n` times where n is number and c command
 * `:` character starts an ex command
@@ -22,6 +31,7 @@ Compound | Longhand
 `A` | `$a`
 `o` | `A<CR>`
 `O` | `ko`
+
 
 ## CURSOR MOTIONS
 * `0` to beginning of line
@@ -44,6 +54,7 @@ Compound | Longhand
 * `;` repeat latest `f`, `t`, `F` or `T`
 * `,` repeat latest `f`, `t`, `F` or `T` in opposite direction
 * `aw` motion for "a word" `daw` deletes the word the cursor is in
+* `ap` motion for "a paragraph"
 
 ## EDIT
 * `J` join lines
@@ -63,6 +74,7 @@ Compound | Longhand
   * `:m $` move current line to after last line
   * `:5,7m 21` move lines 5, 6 & 7 to after line 21
   * `:.,.+4m 21` move 5 lines starting at current to after line 21
+* `gU{motion}` test uppercase, `gu{motion` text lowercase
 
 ## NUMBERS  
 * Arithmetic operations over cursor digit, supports hex, octal
@@ -131,4 +143,4 @@ Compound | Longhand
 
 
 ## PAGE LOCATION
-* page 22
+* page 27
