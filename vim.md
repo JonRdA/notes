@@ -1,12 +1,12 @@
-# VIM
+## VIM
 
-## GENERAL
 * Vim has 3 modes:
 * `Esc` **Command**
 * `i` **Insert**
 * `v` **visual**
 
-## SYNTAX
+## NORMAL MODE
+
 `operator{motion}` is a powerfull combination for editing. The operator
 command is applied on the motion. Its effect reaches from the cursor to the
 specified position by the motion command e.g. `dap` delete a paragraph,
@@ -15,13 +15,13 @@ specified position by the motion command e.g. `dap` delete a paragraph,
 When an operator command is invoked in duplicate it acts upon the current e.g.
 line `dd` delete line, `>>` indent line, `gUgU` or `gUU` line to uppercase
 
-## COMMANDS
+### COMMANDS
 * `<n><c>` executes the program `n` times where n is number and c command
 * `:` character starts an ex command
 * `%` specifies range of lines for the operation
-* `.` repeats last change, even saving keystrokes in insert mode, mini-macro
+* `.` repeats last change, even saving keystrokes in _Insert mode_, mini-macro
 
-### COMPOUND COMMANDS
+#### COMPOUND COMMANDS
 Compound | Longhand
 ---------|----------
 `C` | `c$`
@@ -33,7 +33,7 @@ Compound | Longhand
 `O` | `ko`
 
 
-## CURSOR MOTIONS
+### CURSOR MOTIONS
 * `0` to beginning of line
 * `$` to end of line
 * `^` to first non-blank character of line
@@ -56,16 +56,14 @@ Compound | Longhand
 * `aw` motion for "a word" `daw` deletes the word the cursor is in
 * `ap` motion for "a paragraph"
 
-## EDIT
+### EDIT
 * `J` join lines
-* `u` undo last change, change everything we do between entering insert mode
+* `u` undo last change, change everything we do between entering Insert mode
   and comming back to normal mode
 * `U` undo all line, return to original state
 * `<C-r>` redo, undo the undo's
 * `p` **put** text after cursor (paste)
-* `r{char}` **replace** character, `rt` replaces cursor character with `t`
-* `R` replace more than one character, every typed char replaces existing one
-* `s` delete count characters & insert mode
+* `s` delete count characters & _Insert mode_
 * `c{motion}` **change**, delete motion & insert, `ce` change until end word
 * `~` switch case on character under the cursor and move cursor
 * `ddp` swaps line: `dd` delete line; `p` paste below
@@ -76,19 +74,22 @@ Compound | Longhand
   * `:.,.+4m 21` move 5 lines starting at current to after line 21
 * `gU{motion}` test uppercase, `gu{motion` text lowercase
 
-## NUMBERS  
+### DISPLAY
+* `zz` redraw screen with cursor line in middle
+
+### NUMBERS
 * Arithmetic operations over cursor digit, supports hex, octal
 * `{n}<C-a>` addition of count `n`
 * `{n}<C-x>` subtraction of count `n`
 
 
-## WRITE
-* `a` append text, move cursor forward & _insert mode_
-* `A` append text, move to end of line & _insert mode_
-* `o` open line below current & _insert mode_
-* `O` open line above durrent & _insert mode_
+### WRITE
+* `a` append text, move cursor forward & _Insert mode_
+* `A` append text, move to end of line & _Insert mode_
+* `o` open line below current & _Insert mode_
+* `O` open line above durrent & _Insert mode_
 
-## DELETE (CUT)
+### DELETE (CUT)
 * `x` current character `3x` 3 characters
 * `dd` current line `5dd` current + 4 lines
 * `dW` from cursor until beginning of next word
@@ -97,7 +98,7 @@ Compound | Longhand
 * `dG` current cursor to end of file
 * `d20G` from current to 20th line of file
 
-## YANK
+### YANK
 * `yy` current line `5yy` current + 4
 * `yW` current position to beginning of next word
 * `y$` current position to end of line
@@ -106,8 +107,7 @@ Compound | Longhand
 * `yG` current position to end of file
 * `y20G` current position to 20th line of file
 
-
-## SEARCH
+### SEARCH
 * Last search will always be active, if pressed `n` or `N` will continue
 * `/` search forward for word or phrase, `n` repeat, `N` repeat backwards
 * `?` search backward for word or phrase
@@ -115,7 +115,7 @@ Compound | Longhand
 * `d2/foo` search can be a motion, delete until second occurrence of `foo`
 * `*` search forward the cursor word, `#` backwards
 
-## SUBSTITUTE
+### SUBSTITUTE
 * `:s/old/new` substitute in line the first occurrence of old for new
 * `:s/old/new/g` global flag  `g`, substitute all occurrences in line  
 * `:#,#s/old/new/g` substitute between 2 lines, # and #, number of line
@@ -127,7 +127,7 @@ Compound | Longhand
   * `line/Line` search/substitution
   * `g` global, `gc` global + user confirmation
 
-## FILES
+### FILES
 * `:bn` next file
 * `:bp` previous file
 * `:bd` buffer delete (close file)
@@ -141,6 +141,37 @@ Compound | Longhand
   * `:r <fname>` put contents of file `fname`
   * `:r !<cmd>` put output of shell command `:r !ls`
 
+## INSERT MODE
 
-## PAGE LOCATION
-* page 27
+### COMMANDS
+* `<C-w>` delete back one word
+* `<C-u>` delete back to start of line
+* `<C-[>` switch to _Normal mode_
+* `<C-o>` switch to _Insert Normal mode_, allows only one command
+* `<C-r>{register}` paste text from register addres at cursor position
+
+## REPLACE MODE
+Identical to _Insert mode_, except that it overwrites existing text
+* `R` enter _Replace mode_
+* `r{char}` enter single-shot version of _Replace Mode_
+
+## VISUAL MODE
+Define a selection of text and operate upon it.
+
+## REGISTER
+Delete and yank commands set contents of a register. Put commands get contents
+of a register & inserts them into the document. The expression register can
+evaluate a piece of Vim script and return thr result, can use as calculator.
+* `<C-r>={math-expression}` perform calculation and insert into document
+
+### PRACTICE TEXT
+Typing in Insert mode extends the line, but in Replace mode 
+the line length doesn't change
+
+Practical Vim, by Drew Neil
+Read Drew Neil's Practical Vim
+
+6 chairs, each costing $35, totals $84
+
+### PAGE LOCATION
+* page 38
