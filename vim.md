@@ -121,12 +121,17 @@ Compound | Longhand
   * `g` global, `gc` global + user confirmation
 
 ### FILES
-* `:bn` next file
-* `:bp` previous file
-* `:bd` buffer delete (close file)
+In Vim, we edit an in-memory representation of a file, called _buffer_.
+While files are stored on disk, buffers exist in memory. When opening a file
+its contents are read into a buffer. Most commands operate on buffers, a few
+on files: `:write`, `:update`, :`saveas`.
+* `:ls` show all buffers. `%` current, `#` alternate, `a` active: loaded &
+visible.
+* `<C-^>` tooghe between current & alternate buffer.
+* `:bn` buffer next, `:bp` buffer previous, `:bf` last, `:bf` first.
+* `:bd` buffer delete, does not affect to the file on disk.
 * `!` before command forces file change if unsaved
 * `:buffers` show open files
-* `:r <filename>` inserts the specified file below cursor position
 * `:e <filename>` opens the specified file
 * `<C-g>` show file status and location
 * `:w[<fname>]` write file, if filename specified write to new file
@@ -181,7 +186,7 @@ __command line__ mode can be executed anywhere. Typed on buffer with a `:`
   * `:.,.+4m 21` move 5 lines starting at current to after line 21
 * `:@` repeat the last Ex command. Normal mode `.` equivalent, useful buffers
 * `q:` shows the Ex command history `<CR>` accepts, can be edited as file
-* `:r` **read** insert contents on line below cursor
+* `:r[ead]` **read** insert contents on line below cursor
   * `:r <fname>` put contents of file `fname`
   * `:r !<cmd>` put output of shell command `:r !ls`
 

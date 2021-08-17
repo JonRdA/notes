@@ -12,7 +12,7 @@
 * `[n]>` if number n is present we can choose the file to redirect
 * `&>` redirects standart output and standard error at the same time
 * `cat` command reads file[s] and copies them to standard output
-
+* `echo` sends to _stdout_ the inputed text arguments
 
 ## COMMANDS
 * A command can be one of the following 4 things:
@@ -32,6 +32,28 @@
 * Many executable programs support a `--help` option that displays description
 * More than one command can be put separated with a semicolon `;`
 
+## PROCESSES
+When modern OS are _multitasking_ they create the illusion by switching
+from executing programs. Linux Kernel manages the different programs waiting
+their turn at the CPU using __processes__. 
+* `&` after a command returns a process to the foreground
+
+## SHORTCUTS
+* Cursor movement
+  * `<C-a>` to beginning of line
+  * `<C-e>` to end of line
+  * `<C-f>` move cursor forward one character
+  * `<C-b>` move cursor backward one character
+  * `<Alt-f>` move cursor forward one word
+  * `<Alt-b>` move cursor backward one word
+* Modifying text
+  * `<C-d>` delete character at cursor
+  * `<C-t>` transpose character at cursor
+  * `<Alt-t>` transpose word at cursor
+* Killing & Yanking (Cut & Paste)
+  * `<C-k>` kill from cursor to end of line
+  * `<C-u>` kill from dursor to beginning of line
+  * `<C-y>` yank text from kill-ring 
 
 ### BASIC COMMANDS
 * `sudo apt-get update`
@@ -94,28 +116,6 @@
   * `-P`        usre pearl compatible regular expressions
 
 
-## PROCESSES
-When modern OS are _multitasking_ they create the illusion by switching
-from executing programs. Linux Kernel manages the different programs waiting
-their turn at the CPU using __processes__. 
-* `&` after a command returns a process to the foreground
-
-## SHORTCUTS
-* Cursor movement
-  * `<C-a>` to beginning of line
-  * `<C-e>` to end of line
-  * `<C-f>` move cursor forward one character
-  * `<C-b>` move cursor backward one character
-  * `<Alt-f>` move cursor forward one word
-  * `<Alt-b>` move cursor backward one word
-* Modifying text
-  * `<C-d>` delete character at cursor
-  * `<C-t>` transpose character at cursor
-  * `<Alt-t>` transpose word at cursor
-* Killing & Yanking (Cut & Paste)
-  * `<C-k>` kill from cursor to end of line
-  * `<C-u>` kill from dursor to beginning of line
-  * `<C-y>` yank text from kill-ring 
 
 ## CONFIGURATION
 * `ls` output color 
