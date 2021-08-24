@@ -137,10 +137,17 @@ visible.
 * `:w[<fname>]` write file, if filename specified write to new file
 
 ### FOLDING
-* `zo` open fold
-* `zc` close fold
-* `zR` open all folds
-* `zM` close all folds
+* Folds at cursor location
+  * `zo` open
+  * `zc` close
+  * `zO` open all levels
+  * `zC` close all levels
+
+* All folds in file
+  * `zR` open all
+  * `zM` close all
+  * `zr` close one level
+  * `zm` open one level
 
 ## INSERT MODE
 
