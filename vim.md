@@ -68,7 +68,11 @@ Compound | Longhand
 * `gU{motion}` test uppercase, `gu{motion` text lowercase
 
 ### DISPLAY
-* `zz` redraw screen with cursor line in middle
+* `zz` move current line to middle of screen
+* `zt` move current line to top of screen
+* `zb` move current line to bottom of screen
+* `<C-E>` move screen up one line
+* `<C-Y>` move screen down one line
 
 ### NUMBERS
 * Arithmetic operations over cursor digit, supports hex, octal
