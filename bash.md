@@ -31,6 +31,9 @@
     option may also be included folowed by the optional argument
 * Many executable programs support a `--help` option that displays description
 * More than one command can be put separated with a semicolon `;`
+* `$` Command substitution allows to use the output of a command as an 
+  expansion `ls -l $(which python)`
+* `!<n>` executes history's nth command.
 
 ## PROCESSES
 When modern OS are _multitasking_ they create the illusion by switching
@@ -56,32 +59,16 @@ their turn at the CPU using __processes__.
   * `<C-y>` yank text from kill-ring 
 
 ### BASIC COMMANDS
-* `sudo apt-get update`
-* `sudo apt-get upgrade`
-* `ls`      list directory
-* `cd`      change directory
-* `mdkir`   make directory
-* `touch`   create a file
 * `ln`      create link, option `-s` symbolic, otherwise hard
 * `cat`     read text of file
-* `cp`      copy, -u update
-* `mv`      move file, rename file, move and rename
-* `rm`      remove files
-* `man`     manual page of command, documentation
 * `type`    displays kind of command passed
 * `which`   display executable's location
-* `help`    get help for shell builtins
 * `file`    show file info
-* `less`    read text file
-* `zless`   display contents of gzip compressed files
 * `whatis`  one line manual page descriptions
-* `info`    manuals displayed with a reader program, hyperlinks to nodes
 * `|`       pipeline, first commands output to  seconds input `<cmd> | <cmd>`
 * `$`       replaces with result of the command e.g. `echo folder: $(pwd)`
-* `du`      disk usage. 'du -hcs' gives a nice output
+* `du`      disk usage. `du -hcs` gives a nice output
 * `history` display or manipulate the history list
-* `source`  execute file, usually `.bash*` files
-* `chmod 644` change mode of files (permission) 644 means readable executable,
    writable for user. readable for groups
 
 
@@ -123,4 +110,4 @@ their turn at the CPU using __processes__.
   * xterm-256 colors `di=38;5;215;01` sets 256/24-bit fg color `38;5` color 
     number `215` and bold `01`
 
-  
+ __page 100__ 
