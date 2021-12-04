@@ -128,7 +128,7 @@ Compound | Longhand
 In Vim, we edit an in-memory representation of a file, called _buffer_.
 While files are stored on disk, buffers exist in memory. When opening a file
 its contents are read into a buffer. Most commands operate on buffers, a few
-on files: `:write`, `:update`, :`saveas`.
+on files: `:write`, `:update`, `:saveas`.
 * `:ls` show all buffers. `%` current, `#` alternate, `a` active: loaded &
 visible.
 * `<C-^>` tooghe between current & alternate buffer.
@@ -139,6 +139,10 @@ visible.
 * `:e <filename>` opens the specified file
 * `<C-g>` show file status and location
 * `:w[<fname>]` write file, if filename specified write to new file
+* `:e[dit]` read file from disk into buffer (revert changes)
+* `:b <buffername>` go to buffer name, no complete name written, just to identify
+* `:qall` quit all, add `!` to force `:qall!`
+* `:wall` save all
 
 ### FOLDING
 * Folds at cursor location
@@ -207,6 +211,21 @@ of a register & inserts them into the document. The expression register can
 evaluate a piece of Vim script and return the result, can use as calculator.
 * `<C-r>={math-expression}` perform calculation and insert into document
 
+## WINDOWS
+A window ia a viewport onto a buffer.
+* `:h window-move-cursor`
+  * `<C-w>s` split current window horizontally
+  * `<C-w>v` split current window vertically
+  * `:sp[lit] {file}` split current window horizontally loading `{file}`
+  * `:vp[lit] {file}` split current window vertically loading `{file}`
+  * `:cl[ose]` close active window
+  * `:on[ly]` keep only acrive window closing all others
+* `:h window-resize`
+  * `<C-w>=` equalize width and height of all windows
+  * `[N]<C-w>_` set active window height to `[N]` rows.
+  * `[N]<C-w>|` set active window width to `[N]` rows.
+* `:h window-moving`
+
 ### PRACTICE TEXT
 Chapter     |   Page
 --------------------
@@ -219,4 +238,4 @@ var bar = 'a';
 var foobar = foo + bar;
 
 ### PAGE LOCATION
-* page 77
+* page 91
