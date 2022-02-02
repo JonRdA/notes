@@ -40,6 +40,7 @@ Compound | Longhand
 * `b` to beginning of current word
 * `B` to beginning of current word, ignoring punctuation
 * `e` to end of current word
+* `ge` to end of previous word
 * `<C-f>` page down
 * `<C-b>` page u
 * `numberG` to line number
@@ -129,18 +130,17 @@ In Vim, we edit an in-memory representation of a file, called _buffer_.
 While files are stored on disk, buffers exist in memory. When opening a file
 its contents are read into a buffer. Most commands operate on buffers, a few
 on files: `:write`, `:update`, `:saveas`.
-* `:ls` show all buffers. `%` current, `#` alternate, `a` active: loaded &
-visible.
-* `<C-^>` tooghe between current & alternate buffer.
-* `:bn` buffer next, `:bp` buffer previous, `:bf` last, `:bf` first.
-* `:bd` buffer delete, does not affect to the file on disk.
+* `<C-^>` tooghe between current & alternate buffer
+* `:bn` buffer next, `:bp` buffer previous, `:bf` last, `:bf` first
+* `:bd` buffer delete, does not affect to the file on disk
 * `!` before command forces file change if unsaved
-* `:buffers` show open files
+* `:buffers` or `:ls` show all buffers. `%` current, `#` alternate,
+  `a` active: loaded & visible
 * `:e <filename>` opens the specified file
 * `<C-g>` show file status and location
 * `:w[<fname>]` write file, if filename specified write to new file
 * `:e[dit]` read file from disk into buffer (revert changes)
-* `:b <buffername>` go to buffer name, no complete name written, just to identify
+* `:b <buffername>` go to buffer name, no complete name needed, just enouth
 * `:qall` quit all, add `!` to force `:qall!`
 * `:wall` save all
 
@@ -218,13 +218,20 @@ A window ia a viewport onto a buffer.
   * `<C-w>v` split current window vertically
   * `:sp[lit] {file}` split current window horizontally loading `{file}`
   * `:vp[lit] {file}` split current window vertically loading `{file}`
-  * `:cl[ose]` close active window
+  * `:clo[se]` close active window
   * `:on[ly]` keep only acrive window closing all others
 * `:h window-resize`
   * `<C-w>=` equalize width and height of all windows
   * `[N]<C-w>_` set active window height to `[N]` rows.
   * `[N]<C-w>|` set active window width to `[N]` rows.
 * `:h window-moving`
+
+## FILE EXPLORER
+Opening a directory in vim starts file explorer. It's a regular Vim buffer
+showing contents of a directory. If a file is selected it is opened,
+replacing the file explorer.
+* `:edit .` or `:e.` file explorer of current working directory
+* `:Explore` or `:E` file explorer of active burrer
 
 ### PRACTICE TEXT
 Chapter     |   Page
@@ -238,4 +245,4 @@ var bar = 'a';
 var foobar = foo + bar;
 
 ### PAGE LOCATION
-* page 91
+* page 112
