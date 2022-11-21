@@ -52,7 +52,8 @@ Compound | Longhand
 * `t{char}` till before  next `char` in line, `T{char}` previous
 * `;` repeat latest `f`, `t`, `F` or `T`
 * `,` repeat latest `f`, `t`, `F` or `T` in opposite direction
-* `aw` motion for "a word" `daw` deletes the word the cursor is in
+* `iw` motion for "inner word" `diw` deletes the word
+* `aw` motion for "a word" `daw` deletes the word plus one space
 * `ap` motion for "a paragraph"
 
 ### EDIT
@@ -210,6 +211,9 @@ Delete and yank commands set contents of a register. Put commands get contents
 of a register & inserts them into the document. The expression register can
 evaluate a piece of Vim script and return the result, can use as calculator.
 * `<C-r>={math-expression}` perform calculation and insert into document
+* `"{register}{yank or delete}` sends words to specified registers `"zdw`
+* `""` unnamed register, set by `x, s, c{motion}, d{motion}`; `"0` yank
+  register, set by `y{motion}`
 
 ## WINDOWS
 A window ia a viewport onto a buffer.
@@ -243,6 +247,18 @@ Visual mode |   44
 var foo = 1;
 var bar = 'a';
 var foobar = foo + bar;
+var tpl = [
+    '<a href="{url}">{title}</a>'
+]
+console.log([{'a':1},{'b':2}])
+cities = [London Berlin New York]
+Practical vim
+
+collection = getCollection();
+process(collection, target);
+getCollectiongetCollection
+
+I like fish and chips.
 
 ### PAGE LOCATION
-* page 112
+* page 151
