@@ -48,7 +48,8 @@ their turn at the CPU using __processes__.
 ### FLOW CONTROL
 * `test expression` is similar to `[ expression ]`, returns exit status of `0`
   when `expression` is `tue`, `1` otherwise
-* ```bash
+*
+```bash
 if [ "$x" -eq 5 ]; then
     echo "x equals 5."
 else
