@@ -15,6 +15,8 @@
 * `echo` sends to _stdout_ the inputed text arguments
 
 ## COMMANDS
+* Commands issue a value (0, 255) to the system, `0` for success and rest for
+  failure. Parameter `?` contains it, `echo $?`
 * A command can be one of the following 4 things:
   * Executable program: examples in `/usr/bin` complied binaries (C++, C...)
     or scripting languages (Perl, Python, Ruby...)
@@ -40,6 +42,19 @@ When modern OS are _multitasking_ they create the illusion by switching
 from executing programs. Linux Kernel manages the different programs waiting
 their turn at the CPU using __processes__. 
 * `&` after a command returns a process to the foreground
+
+## SCRIPTS
+
+### FLOW CONTROL
+* `test expression` is similar to `[ expression ]`, returns exit status of `0`
+  when `expression` is `tue`, `1` otherwise
+* ```bash
+if [ "$x" -eq 5 ]; then
+    echo "x equals 5."
+else
+    echo "x does not equal 5."
+fi
+```
 
 ## SHORTCUTS
 * Cursor movement
