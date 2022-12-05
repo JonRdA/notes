@@ -48,7 +48,7 @@ their turn at the CPU using __processes__.
 ### FLOW CONTROL
 * `test expression` is similar to `[ expression ]`, returns exit status of `0`
   when `expression` is `tue`, `1` otherwise
-*
+* Flow contro structure:
 ```bash
 if [ "$x" -eq 5 ]; then
     echo "x equals 5."
@@ -56,6 +56,18 @@ else
     echo "x does not equal 5."
 fi
 ```
+There are expressions for `files`, `strings` and `integers`
+Table of expressions:
+Expression | Is true if
+------------ | -------------
+`file1 -nt file2` | `file1` is newer than `file2`
+`file1 -ot file2` | `file1` is older than `file2`
+`-e file` | `file` exists
+`-f file` | `file` exists and is a regular file
+`-L file` | `file` exists and is a symbolic link
+`-r file` | `file` exists and is readable
+`-w file` | `file` exists and is writable
+`-x file` | `file` exists and is executable
 
 ## SHORTCUTS
 * Cursor movement

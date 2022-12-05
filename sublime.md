@@ -1,5 +1,12 @@
 # Sublime Text 3
 
+## Install
+Installed packages
+* Predawn
+* Matherial theme (will ask for icons)
+* BracketHighlighter
+* RainbowCSV
+
 ## General
 
 | Shortcut | Description |
