@@ -130,12 +130,13 @@ Expression | Is true if
   * `-C <n>`    watch number of lines before and after
   * `-P`        usre pearl compatible regular expressions
 
-
-
 ## CONFIGURATION
 * `ls` output color 
   * `di=00;31` sets bold text `a0` and red foreground `31`
   * xterm-256 colors `di=38;5;215;01` sets 256/24-bit fg color `38;5` color 
     number `215` and bold `01`
+
+## MOUNTING DEVICES
+* Mounting a device is to attach it to the file system tree `mount`
 
  __page 100__ 

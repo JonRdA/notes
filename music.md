@@ -27,3 +27,9 @@ youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-qualit
 
 # cmus
 * `:update-cache` and if not `:clear` and add all again `:add .`
+
+# playitslowly
+It is unmantained and does not work for GTK4, only with GTK3.
+Add `gi.require_version('Gtk', '3.0')` after line 34
+`gi.require_version('Gst', '1.0')` on file `app.py` usually on 
+directory `/usr/local/lib/python3.10/dist-packages/playitslowly/`
