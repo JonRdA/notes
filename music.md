@@ -23,6 +23,9 @@ youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 YT_URL
 
 # Download playlist
 youtube-dl -ict --yes-playlist --extract-audio --audio-format mp3 --audio-quality 0 https://www.youtube.com/playlist?list=UUCvVpbYRgYjMN7mG7qQN0Pg
+
+# new code
+yt-dlp -f 'ba' -x --audio-format mp3  <youtube-url>  -o '%(title)s.mp3'
 ```
 
 # cmus
