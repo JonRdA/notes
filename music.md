@@ -29,7 +29,41 @@ yt-dlp -f 'ba' -x --audio-format mp3  <youtube-url>  -o '%(title)s.mp3'
 ```
 
 # cmus
+* Tutorial [link](https://linux.die.net/man/7/cmus-tutorial)
 * `:update-cache` and if not `:clear` and add all again `:add .`
+
+
+## cheatsheet
+| Command            | Description                          |
+|--------------------|--------------------------------------|
+| 1                  | Library                              |
+| 2                  | Sorted Library                       |
+| 4                  | Play Queue                           |
+| 7                  | Settings                             |
+| :add `<directory>` | Add files to library                 |
+| j                  | Up                                   |
+| k                  | Down                                 |
+| l                  | Scrub forward                        |
+| h                  | Scrub back                           |
+| g                  | Top of list                          |
+| G                  | Bottom of list                       |
+| space              | Expand tree                          |
+| tab                | Switch between tabs                  |
+| enter              | Start playing song                   |
+| v                  | Stop playback                        |
+| b                  | Next track                           |
+| z                  | Previous track                       |
+| c                  | Pause track                          |
+| x                  | Restart track                        |
+| i                  | Jump view to currently playing track |
+| /                  | Search cmus                          |
+| n                  | Next instance of search result       |
+| -                  | Reduce volume by 10%                 |
+| +                  | Increase volume by 10%               |
+| p                  | Move song down               |
+| P                  | Move song up |
+
+
 
 # playitslowly
 It is unmantained and does not work for GTK4, only with GTK3.
