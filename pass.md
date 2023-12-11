@@ -32,6 +32,12 @@ gpg2 --allow-secret-key-import --import MY_FILENAME_secret.gpg
 It should work out of the box. Make sure that `.password-store/..gpg-id` uses
 the appropiate gpg key.
 
+New systems lack the needed `wl-copy`, install it with
+
+```bash
+sudo apt install wl-clipboard 
+```
+
 
 ## Another method, not so good
 From this [article](https://droidrant.com/notes-pass-unix-password-manager/)
